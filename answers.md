@@ -19,9 +19,13 @@ Cho thấy thông tin:
 - Time
 - Size
 - Waterfall
+
 2.2.
+- Status Code của request đầu tiên
 ![Kết quả Network câu A1 ý 1](cau_a1_y1.jpg)
+- Tổng thời gian load trang
 ![Kết quả Network câu A1 ý 1](cau_a1_y2.jpg)
+- Một request trả về file CSS
 ![Kết quả Network câu A1 ý 1](cau_a1_y3.jpg)
 
 Câu A2 (5đ) — Semantic HTML (answers.md - Phần A)
