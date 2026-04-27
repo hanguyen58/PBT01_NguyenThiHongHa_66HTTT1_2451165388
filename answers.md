@@ -20,7 +20,7 @@ Cho thấy thông tin:
 - Size
 - Waterfall
 
-## 2.2.
+### 2.2.
 - Status Code của request đầu tiên
   
 ![Kết quả Network câu A1 ý 1](cau_a1_y1.jpg)
