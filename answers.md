@@ -71,3 +71,29 @@ Câu A4 (5đ) — Table (answers.md - Phần A)
 + Tốc độ tải trang chậm
 + Khó bảo trì và nâng cấp
 + Code rối
+-----
+
+# Bài B4 (15đ) — Phân tích trang web thật
+
+## 1
+
+- 3 thẻ semantic HTML5 mà trang đó sử dụng
+
+![3 thẻ semantic HTML5 mà trang đó sử dụng](B4.1.jpg)
+
++ Thẻ `<noscript>`: Thẻ này dùng để hiển thị nội dung thay thế nếu trình duyệt không hỗ trợ hoặc bị tắt JavaScript
++ Thẻ `<script>`: Đây là thẻ để nhúng mã thực thi
++ Thẻ `<div>` : Chứa nội dung chính của trang web
+
+## 2
+
+![Thẻ table](B4.2.jpg)
+
+- Table hiển thị hướng dẫn chọn size quần
+- Có dùng `<thead>`,`<tbody>`
+
+## 3
+![Thẻ form](B4.3.jpg)
+- `action`: `/search`
+- `method`: `get`
+- `input types`: `type="button"`
