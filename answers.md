@@ -91,7 +91,7 @@ Giải thích:
 
 - 3 thẻ semantic HTML5 mà trang đó sử dụng
 
-![3 thẻ semantic HTML5 mà trang đó sử dụng](B4.1.jpg)
+![3 thẻ semantic HTML5 mà trang đó sử dụng](screenshots%20B%C3%A0i%20B4/B4.1.jpg)
 
 + Thẻ `<noscript>`: Thẻ này dùng để hiển thị nội dung thay thế nếu trình duyệt không hỗ trợ hoặc bị tắt JavaScript
 + Thẻ `<script>`: Đây là thẻ để nhúng mã thực thi
@@ -99,13 +99,13 @@ Giải thích:
 
 ## 2
 
-![Thẻ table](B4.2.jpg)
+![Thẻ table](screenshots%20B%C3%A0i%20B4/B4.2.jpg)
 
 - Table hiển thị hướng dẫn chọn size quần
 - Có dùng `<thead>`,`<tbody>`
 
 ## 3
-![Thẻ form](B4.3.jpg)
+![Thẻ form](screenshots%20B%C3%A0i%20B4/B4.3.jpg)
 - `action`: `/search`
 - `method`: `get`
 - `input types`: `type="button"`
