@@ -85,7 +85,7 @@ Giải thích:
 + Code rối
 -----
 
-# Bài B4 (15đ) — Phân tích trang web thật
+# Bài B4 (15đ) — Phân tích trang web thật (answers.md - Phần B)
 
 ## 1
 
@@ -109,3 +109,159 @@ Giải thích:
 - `action`: `/search`
 - `method`: `get`
 - `input types`: `type="button"`
+
+-------
+# PHẦN C — SUY LUẬN (20 điểm)
+## Câu C1 (10đ) — Thiết kế cấu trúc (answers.md - Phần C)
+
+-Header + Navigation
+```
+    <!-- HEADER: chứa logo + menu chính -->
+    <header>
+        <div class="logo">Logo</div> <!-- div vì chỉ là container -->
+        <nav>  <!-- nav: dùng cho điều hướng chính -->
+            <ul> <!-- ul vì menu không cần thứ tự -->
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Danh mục</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+```
+
+- Breadcrumb (Trang chủ > Điện thoại > iPhone 16)
+```
+    <nav aria-label="breadcrumb"> <!-- nav vì là điều hướng -->
+        <ol> <!-- ol vì có thứ tự cấp bậc -->
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Điện thoại</a></li>
+            <li aria-current="page">iPhone 16</li> <!-- trang hiện tại -->
+        </ol>
+    </nav>
+    
+    <main> <!-- main: nội dung chính của trang -->
+
+        <!-- section: khu vực chi tiết sản phẩm -->
+        <section class="product-detail">
+
+            <!-- article: 1 sản phẩm là 1 nội dung độc lập -->
+            <article>
+```
+
+- Khu vực ảnh sản phẩm (5 ảnh)
+```
+          <section class="product-images">
+                   <!-- figure dùng cho ảnh minh họa -->
+                    <figure>
+                        <img src="img1.jpg" alt="Ảnh sản phẩm 1">
+                    </figure>
+                    <figure>
+                        <img src="img2.jpg" alt="Ảnh sản phẩm 2">
+                    </figure>
+                    <figure>
+                        <img src="img3.jpg" alt="Ảnh sản phẩm 3">
+                    </figure>
+                    <figure>
+                        <img src="img4.jpg" alt="Ảnh sản phẩm 4">
+                    </figure>
+                    <figure>
+                        <img src="img5.jpg" alt="Ảnh sản phẩm 5">
+                    </figure>
+                </section>
+```
+
+- Thông tin sản phẩm (tên, giá, đánh giá sao, mô tả)
+```
+          <section class="product-info">
+                    
+                    <h1>Tên sản phẩm</h1> <!-- h1 vì tiêu đề chính -->
+
+                    <p class="price">Giá sản phẩm</p> <!-- p vì chỉ là text -->
+
+                    <!-- Đánh giá -->
+                    <div class="rating"> <!-- div vì chỉ là container -->
+                        <span>★★★★★</span> <!-- span vì inline -->
+                        <span>(100 đánh giá)</span>
+                    </div>
+
+                    <!-- Mô tả -->
+                    <p>Mô tả sản phẩm...</p>
+                </section>
+```
+
+- Bảng thông số kỹ thuật
+```
+          <section class="specs">
+                <h2>Thông số kỹ thuật</h2>
+
+                <!-- table dùng cho dữ liệu dạng bảng -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Thuộc tính</th>
+                            <th>Giá trị</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Màn hình</td>
+                            <td>6.1 inch</td>
+                        </tr>
+                        <tr>
+                            <td>Pin</td>
+                            <td>4000mAh</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+```
+
+- Khu vực đánh giá/bình luận
+```
+      <section class="reviews">
+                <h2>Đánh giá & Bình luận</h2>
+
+                <!-- Mỗi comment là 1 article -->
+                <article class="review">
+                    <h3>Người dùng A</h3>
+                    <p>Rất tốt!</p>
+                </article>
+
+                <article class="review">
+                    <h3>Người dùng B</h3>
+                    <p>Ổn trong tầm giá</p>
+                </article>
+            </section>
+
+        </section>
+```
+
+- Sidebar: Sản phẩm tương tự
+```
+      <aside> <!-- aside vì nội dung phụ -->
+            <h2>Sản phẩm tương tự</h2>
+
+            <ul> <!-- danh sách sản phẩm -->
+                <li><a href="#">Sản phẩm 1</a></li>
+                <li><a href="#">Sản phẩm 2</a></li>
+                <li><a href="#">Sản phẩm 3</a></li>
+            </ul>
+        </aside>
+```
+
+- Footer
+```
+    <footer>
+        <p>© 2026 - Bản quyền</p>
+    </footer>
+
+```
+
+
+## Câu C2 (10đ) — So sánh & Tranh luận (answers.md - Phần C)
+```
+    Theo tôi không nên dùng <div> cho mọi thứ. Tuy SEO có các thẻ như <header>, <main>, <article>, <h1> giúp công cụ tìm kiếm hiểu được cấu trúc trang và xác định đâu là nội dung quan trọng. Nhưng nếu toàn <div>, trang web sẽ khó được index hiệu quả vì thiếu ngữ nghĩa. Về Accessibility: các công cụ hỗ trợ như screen reader dựa vào semantic để giúp người khiếm thị điều hướng nhanh hơn.
+Ví dụ, họ có thể nhảy trực tiếp đến <nav> hoặc <main> thay vì phải đọc toàn bộ nội dung như khi dùng <div>. Thực tế như xây dựng một trang web nếu mỗi bài viết được bọc trong <article> và tiêu đề dùng <h2>, thì cả công cụ tìm kiếm lẫn screen reader đều nhận diện rõ đây là các nội dung độc lập. Điều này giúp cải thiện trải nghiệm người dùng và khả năng hiển thị trên Google. Semantic HTML không tốn thời gian, mà giúp code rõ ràng, dễ hiểu và chuyên nghiệp hơn.
+```
+
+
